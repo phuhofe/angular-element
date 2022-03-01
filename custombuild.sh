@@ -1,0 +1,2 @@
+#!/bin/sh
+ng build --prod --single-bundle --output-hashing=none --vendor-chunk=false && cat dist/angular-element/polyfills.js dist/angular-element/scripts.js dist/angular-element/main.js dist/angular-element/3.js dist/angular-element/4.js > client-page/public/assets/js/sdk.js

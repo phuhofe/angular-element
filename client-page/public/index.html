@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <title>Client page</title>
+</head>
+
+<body onload="onClientPageLoad()">
+
+  <style>
+    code {
+      padding: 1rem;
+      width: fit-content;
+      overflow-x: auto;
+      font-size: 0.85rem;
+      line-height: 1.6rem;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .color-select-btn {
+      height: 20px;
+      width: 35px;
+    }
+
+  </style>
+
+  <div class="container mt-3">
+
+    <h2 class="mb-3">Pricing Element</h2>
+
+    <p>Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
+
+    <div>
+      <h4>Script</h4>
+      <p> Place the following scripts near the end of your pages, right before the closing body tag, to enable them.</p>
+      <code class="bg-light">
+        <span class="text-primary">&lt;script src="</span> <span
+          class="text-success">https://client-element.web.app/assets/js/polyfills.js" defer</span><span
+          class="text-primary">&gt;&lt;/script&gt;</span>
+        <br>
+        <span class="text-primary">&lt;script src="</span> <span class="text-success">
+          https://client-element.web.app/assets/js/main.js" defer</span><span
+          class="text-primary">&gt;&lt;/script&gt;</span>
+        <br>
+        <span class="text-primary">&lt;script src="</span> <span class="text-success">
+          https://client-element.web.app/assets/js/3.js" defer</span><span
+          class="text-primary">&gt;&lt;/script&gt;</span>
+      </code>
+
+      or 
+
+      <code class="bg-light">
+        <span class="text-primary">&lt;script src="</span> <span
+          class="text-success">https://client-element.web.app/assets/js/sdk.js" defer</span><span
+          class="text-primary">&gt;&lt;/script&gt;</span>
+      </code>
+
+    </div>
+
+    <div class="mt-3">
+      <h4>CSS</h4>
+      <p>Copy-paste the stylesheet
+        <link> into your
+
+        <head> before all other stylesheets to load our CSS.</p>
+      <code class="bg-light">
+        <span class="text-primary">&lt;link href="</span> <span
+          class="text-success">https://client-element.web.app/assets/css/styles.css" defer</span><span
+          class="text-primary">&gt;&lt;/link&gt;</span>
+      </code>
+    </div>
+
+    <div class="mt-3">
+      <h4>Element Script</h4>
+      <code class="bg-light">
+        <span class="text-primary">&lt;micro-pricing</span> <span class="text-primary">&gt;&lt;/micro-pricing&gt;</span>
+      </code>
+
+      <p>If you want to use you specific config. Add config-data</p>
+
+      <code class="bg-light">
+        <span class="text-primary">&lt;micro-pricing</span> <span class="text-success">config-data="config"</span><span class="text-primary">&gt;&lt;/micro-pricing&gt;</span>
+      </code>
+    </div>
+
+    <div class="mt-3">
+      <h4>Base tag</h4>
+      <p>
+        The HTML base specifies a base path for resolving relative URLs to assets such as images, scripts, and
+        style sheets.
+        <br> During navigation, the Angular router uses the base href as the base path to component, template, and
+        module files.
+      </p>
+      <code class="bg-light">
+        <span class="text-primary">&lt;base href="/"&gt;</span>
+      </code>
+    </div>
+
+    <div class="mt-3">
+      <h4>Config data</h4>
+      <div class="mb-3">
+       
+        <div class="my-3">
+          <label class="form-label">Pricing data</label>
+
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home"
+                aria-selected="true">
+                First Pricing
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab"
+                aria-controls="profile" aria-selected="false">
+                Second Pricing
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab"
+                aria-controls="contact" aria-selected="false">
+                Third Pricing
+              </a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+              <div class="mt-3">
+                <div>
+                  <label class="form-label"> Title </label>
+                  <input type="text" class="form-control" value="Standard" id="firstTitle">
+                </div>
+
+                <div>
+                  <label class="form-label"> Price </label>
+                  <input type="text" class="form-control" value="0" id="firstPrice">
+                </div>
+
+                <div>
+                  <label class="form-label"> Action Text </label>
+                  <input type="text" class="form-control" value="Get Started" id="firstAction">
+                </div>
+
+              </div>
+
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+              <div class="mt-3">
+                <div>
+                  <label class="form-label"> Title </label>
+                  <input type="text" class="form-control"  value="Professional" id="secondTitle">
+                </div>
+
+                <div>
+                  <label class="form-label"> Price </label>
+                  <input type="text" class="form-control" value="20" id="secondPrice">
+                </div>
+
+                <div>
+                  <label class="form-label"> Action Text </label>
+                  <input type="text" class="form-control" value="Get Started" id="secondAction">
+                </div>
+
+              </div>
+
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+              <div class="mt-3">
+                <div>
+                  <label class="form-label"> Title </label>
+                  <input type="text" class="form-control" value="Premium"  id="thirdTitle">
+                </div>
+
+                <div>
+                  <label class="form-label"> Price </label>
+                  <input type="text" class="form-control" value="50" id="thirdPrice">
+                </div>
+
+                <div>
+                  <label class="form-label"> Action Text </label>
+                  <input type="text" class="form-control" value="Get Started" id="thirdAction">
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <button type="button" onClick="applyConfig()" class="btn btn-primary">
+          Save
+        </button>
+      </div>
+
+    </div>
+
+    <main class="container">
+      <micro-pricing id="microPricing" config-data="config"></micro-pricing>
+    </main>
+
+    <script src="https://client-element.web.app/assets/js/sdk.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+
+    <script>
+      let config = {
+        mainColor: 'purple',
+        secondaryColor: 'blue',
+        pricing: [{
+            id: 1,
+            title: 'Standard',
+            itemPrice: 0,
+            detail: [
+              "5 users included",
+              "1 GB of storage",
+              "Email support",
+              "Help center access"
+            ],
+            action: 'Get Started'
+          },
+          {
+            id: 2,
+            title: 'Professional',
+            itemPrice: 20,
+            detail: [
+              "15 users included",
+              "20 GB of storage",
+              "Email support",
+              "Help center access"
+            ],
+            action: 'Get Started'
+          },
+          {
+            id: 3,
+            title: 'Premium',
+            itemPrice: 50,
+            detail: [
+              "50 users included",
+              "100 GB of storage",
+              "Email support",
+              "Help center access"
+            ],
+            action: 'Get Started'
+          }
+        ]
+      }
+
+      function onClientPageLoad() {
+        const jsonParse = JSON.stringify(config);
+        document.getElementById('microPricing').setAttribute('config-data', jsonParse)
+      };
+
+      function applyConfig() {
+        const firstTitle = document.getElementById('firstTitle').value;
+        const firstPrice = document.getElementById('firstPrice').value;
+        const firstAction = document.getElementById('firstAction').value;
+
+        const secondTitle = document.getElementById('secondTitle').value;
+        const secondPrice = document.getElementById('secondPrice').value;
+        const secondAction = document.getElementById('secondAction').value;
+
+        const thirdTitle = document.getElementById('thirdTitle').value;
+        const thirdPrice = document.getElementById('thirdPrice').value;
+        const thirdAction = document.getElementById('thirdAction').value;
+
+        const data = [{
+            title: firstTitle,
+            itemPrice: firstPrice,
+            action: firstAction
+          },
+          {
+            title: secondTitle,
+            itemPrice: secondPrice,
+            action: secondAction
+          },
+          {
+            title: thirdTitle,
+            itemPrice: thirdPrice,
+            action: thirdAction
+          }
+        ];
+
+        config = {
+          ...config,
+          pricing: [
+            ...config.pricing.map((price, i) => {
+              return {
+                ...price,
+                title: data[i].title,
+                itemPrice: data[i].itemPrice,
+                action: data[i].action
+              }
+            })
+          ]
+        };
+
+        const jsonParse = JSON.stringify(config);
+        console.log(jsonParse);
+        
+        document.getElementById('microPricing').setAttribute('config-data', jsonParse);
+      }
+
+    </script>
+
+    <!-- <script src="./client-page/assets/js/4.js"></script> -->
+
+</body>
+
+</html>
